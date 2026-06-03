@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>FourZ Kampala - Premium Botanicals</title>
+<meta name="description" content="Premium selection of cured botanical flowers, artisanal treats, and curated variety bundles in Kampala.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="FourZ Kampala | Premium Botanical Selection">
+<meta property="og:description" content="Discover premium, hand-selected botanical products, sweet artisanal edibles, and variety bundles in Kampala.">
+<meta property="og:locale" content="en_UG">
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://unpkg.com/lucide@latest"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+body { font-family: 'Inter', sans-serif; background-color: #030d0a; -webkit-tap-highlight-color: transparent; }
+.scrollbar-hide::-webkit-scrollbar { display: none; }
+.scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+/* Glass Panel Styling */
+.glass-panel { background: rgba(6, 22, 17, 0.7); backdrop-filter: blur(10px); border: 1px solid rgba(16, 185, 129, 0.08); }
+.fade-in { animation: fadeIn 0.4s ease-in-out; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+.animate-up { animation: slideUp 0.3s ease-out; }
+@keyframes slideUp { from { transform: translateY(100%); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+</style>
+</head>
+<body class="text-emerald-100 antialiased">
+<div class="flex flex-col md:flex-row max-w-7xl mx-auto shadow-2xl overflow-hidden min-h-screen bg-[#030d0a]">
+<!-- Sidebar for Desktop -->
+<aside class="hidden md:flex sticky top-0 h-screen w-[280px] bg-[#041410] border-r border-emerald-950/60 flex-col z-50 p-6">
+<div class="flex items-center gap-3 mb-10">
+<div class="w-10 h-10 rounded-xl bg-emerald-600 flex items-center justify-center shrink-0 shadow-lg shadow-emerald-900/30">
+<i data-lucide="leaf" class="w-6 h-6 text-white"></i>
+</div>
+<div>
+<h1 class="text-lg font-bold text-white tracking-tight leading-none">FourZ<br><span class="text-emerald-400 text-xs">Botanical Lounge</span></h1>
+</div>
+</div>
+<nav class="space-y-2 flex-1">
+<button onclick="filterCategory('all')" class="nav-item w-full flex items-center gap-3 px-4 py-3 rounded-xl transition-all text-sm font-medium bg-emerald-600 text-white shadow-lg shadow-emerald-950/40">
+<i data-lucide="sparkles" class="w-5 h-5 text-emerald-200"></i> All Products
+</button>
+<button onclick="filterCategory('Flowers')" class="nav-item w-full flex items-center gap-3 px-4 py-3 rounded-xl transition-all text-sm font-medium text-emerald-400 hover:bg-emerald-900/50 hover:text-white">
+<i data-lucide="flower" class="w-5 h-5"></i> Exotic Flowers
+</button>
+<button onclick="filterCategory('Edibles')" class="nav-item w-full flex items-center gap-3 px-4 py-3 rounded-xl transition-all text-sm font-medium text-emerald-400 hover:bg-emerald-900/50 hover:text-white">
+<i data-lucide="cookie" class="w-5 h-5"></i> Premium Edibles
+</button>
+<button onclick="filterCategory('Bundles')" class="nav-item w-full flex items-center gap-3 px-4 py-3 rounded-xl transition-all text-sm font-medium text-emerald-400 hover:bg-emerald-900/50 hover:text-white">
+<i data-lucide="package" class="w-5 h-5"></i> Special Bundles
+</button>
+</nav>
+</aside>
+
+<div class="flex-1 h-screen overflow-y-auto pb-24 md:pb-0 scrollbar-hide relative">
+<!-- Mobile Header -->
+<header class="sticky top-0 z-40 bg-[#030d0a]/95 backdrop-blur-md border-b border-emerald-950 p-4 flex justify-between items-center md:hidden">
+<div class="flex items-center gap-2">
+<div class="w-10 h-10 rounded-xl bg-emerald-600 flex items-center justify-center shrink-0">
+<i data-lucide="leaf" class="w-5 h-5 text-white"></i>
+</div>
+<span class="font-bold text-white text-base leading-tight">FourZ<br><span class="text-emerald-400 text-xs">Botanical Lounge</span></span>
+</div>
+<div class="flex gap-2">
+<a href="tel:+256709207543" class="bg-emerald-950 border border-emerald-800/30 p-2 rounded-full text-emerald-300 hover:text-white">
+<i data-lucide="phone-call" class="w-5 h-5"></i>
+</a>
+</div>
+</header>
+
+<main class="p-4 md:p-8 max-w-5xl mx-auto">
+<!-- Hero banner -->
+<div class="rounded-3xl bg-gradient-to-r from-emerald-900 via-emerald-950 to-[#041410] p-6 md:p-10 mb-8 relative overflow-hidden shadow-2xl border border-emerald-800/20">
+<div class="absolute -top-10 -right-10 w-40 h-40 bg-emerald-500 opacity-20 rounded-full blur-3xl"></div>
+<div class="relative z-10">
+<span class="bg-emerald-500/20 text-emerald-300 text-[10px] font-bold px-3 py-1 rounded-full mb-3 inline-block border border-emerald-500/30">PREMIUM & CURATED</span>
+
+<div class="flex items-start justify-between gap-6 mb-6">
+<div class="max-w-md">
+<h2 class="text-2xl md:text-5xl font-bold text-white mb-2 tracking-tight">
+Kampala's Finest <br>Botanical Treats.
+</h2>
+<h2 class="text-lg md:text-2xl font-bold text-emerald-400 mb-2 tracking-tight">
+Located in Kampala
+</h2>
+<p class="text-emerald-100/70 text-sm md:text-base">
+Fresh pre-rolls, high-density cured buds, infused gourmet sweets, and artisanal dark chocolates delivered straight to you.
+</p>
+</div>
+<div class="w-20 h-20 md:w-28 md:h-28 rounded-2xl bg-emerald-950/80 border border-emerald-500/30 shadow-lg shrink-0 flex items-center justify-center">
+<i data-lucide="leaf" class="w-10 h-10 md:w-12 md:h-12 text-emerald-400"></i>
+</div>
+</div>
+<div class="flex gap-3">
+<a href="https://wa.me/256709207543" class="relative bg-white text-emerald-900 px-5 py-2.5 rounded-xl font-bold text-sm shadow-lg hover:bg-gray-100 transition flex items-center gap-2">
+<span class="absolute -top-1 -right-1 flex h-3 w-3">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+<span class="relative inline-flex rounded-full h-3 w-3 bg-emerald-500"></span>
+</span>
+<i data-lucide="message-circle" class="w-4 h-4"></i> Order Now
+</a>
+<a href="#service-feed" class="relative bg-emerald-950/60 border border-emerald-800/40 text-white px-5 py-2.5 rounded-xl font-bold text-sm hover:bg-emerald-900/50 transition backdrop-blur-sm">
+View Menu
+</a>
+</div>
+</div>
+</div>
+
+<!-- Sticky filter pills (Mobile only) -->
+<div class="flex gap-3 overflow-x-auto pb-4 scrollbar-hide mb-4 sticky top-[72px] md:top-0 z-30 bg-[#030d0a] pt-2">
+<button onclick="filterCategory('all')" class="cat-pill whitespace-nowrap px-4 py-2 rounded-full bg-emerald-600 text-white text-xs font-bold border border-emerald-500 shadow-lg">All</button>
+<button onclick="filterCategory('Flowers')" class="cat-pill whitespace-nowrap px-4 py-2 rounded-full bg-[#0a2018] text-emerald-400 border border-emerald-900/60 text-xs font-semibold hover:bg-emerald-900 hover:text-white transition">Exotic Flowers</button>
+<button onclick="filterCategory('Edibles')" class="cat-pill whitespace-nowrap px-4 py-2 rounded-full bg-[#0a2018] text-emerald-400 border border-emerald-900/60 text-xs font-semibold hover:bg-emerald-900 hover:text-white transition">Premium Edibles</button>
+<button onclick="filterCategory('Bundles')" class="cat-pill whitespace-nowrap px-4 py-2 rounded-full bg-[#0a2018] text-emerald-400 border border-emerald-900/60 text-xs font-semibold hover:bg-emerald-900 hover:text-white transition">Special Bundles</button>
+</div>
+
+<!-- Search Input -->
+<div class="relative mb-6">
+<i data-lucide="search" class="absolute left-4 top-3.5 w-5 h-5 text-emerald-600"></i>
+<input type="text" id="search-input" placeholder="Search for buds, space cookies, gummies, chocolate..." class="w-full bg-[#0a2018]/50 border border-emerald-900/60 rounded-xl py-3.5 pl-12 pr-4 text-white placeholder-emerald-700 focus:outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 transition">
+</div>
+
+<!-- Product list feed -->
+<div id="service-feed" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 pb-10">
+</div>
+</main>
+</div>
+
+<!-- Bottom Navigation for Mobile -->
+<nav class="md:hidden fixed bottom-0 left-0 right-0 bg-[#041410]/95 backdrop-blur-lg border-t border-emerald-950 px-6 py-3 flex justify-between items-center z-50">
+<button onclick="window.scrollTo({top:0, behavior:'smooth'})" class="flex flex-col items-center gap-1 text-emerald-400">
+<i data-lucide="leaf" class="w-5 h-5"></i>
+<span class="text-[10px] font-medium">Home</span>
+</button>
+<a href="tel:+256709207543" class="flex flex-col items-center gap-1 text-emerald-600 hover:text-white">
+<i data-lucide="phone" class="w-5 h-5"></i>
+<span class="text-[10px] font-medium">Call Us</span>
+</a>
+<a href="https://wa.me/256709207543" class="flex flex-col items-center gap-1 text-emerald-600 hover:text-white">
+<i data-lucide="message-circle" class="w-5 h-5"></i>
+<span class="text-[10px] font-medium">WhatsApp</span>
+</a>
+</nav>
+</div>
+
+<!-- Dynamic Detail Popup Modal -->
+<div id="item-modal" class="hidden fixed inset-0 z-[100] flex items-end md:items-center justify-center px-0 md:px-4">
+<div onclick="closeModal()" class="absolute inset-0 bg-black/80 backdrop-blur-sm transition-opacity"></div>
+<div class="relative bg-[#061813] w-full max-w-md md:rounded-2xl rounded-t-2xl border border-emerald-900 shadow-2xl overflow-hidden transform transition-all scale-100 flex flex-col animate-up max-h-[90vh]">
+<button onclick="closeModal()" class="absolute top-4 right-4 z-20 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full backdrop-blur-md">
+<i data-lucide="x" class="w-5 h-5"></i>
+</button>
+<div id="modal-content" class="flex flex-col">
+</div>
+</div>
+</div>
+
+<script>
+const WHATSAPP_NUM = "256709207543";
+
+// Menu items matching the provided flyer pricing and specifications
+const SERVICES = [
+{ 
+id: 1, 
+name: 'Choice Botanical Buds & Flowers', 
+category: 'Flowers', 
+image: 'https://images.unsplash.com/photo-1603909223429-69bb7101f420?auto=format&fit=crop&q=80&w=600', 
+price: '3k, 5k, 7k, 10k, 15k',
+desc: 'Premium selection of meticulously cured and hand-trimmed herbal buds. Available in custom grams tailored for fine aroma, smooth profile, and exceptional quality.'
+},
+{ 
+id: 2, 
+name: 'Artisanal Pre-Rolled Cones', 
+category: 'Flowers', 
+image: 'https://images.unsplash.com/photo-1536697246787-1f7ae568d89a?auto=format&fit=crop&q=80&w=600', 
+price: '3k, 5k, 7k, 10k, 15k',
+desc: 'Slow-burning pre-rolled paper cones packed evenly with choice-grade flowers. Perfect for consistent, smooth performance from start to finish.'
+},
+{ 
+id: 3, 
+name: 'Signature Space Cookies', 
+category: 'Edibles', 
+image: 'https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format&fit=crop&q=80&w=600', 
+price: '10,000 UGX',
+desc: 'Gourmet, oven-fresh chocolate chip cookies baked using premium botanical infusions. Rich in flavor with highly balanced, long-lasting confectionery qualities.'
+},
+{ 
+id: 4, 
+name: 'Astro Infused Fruit Gummies', 
+category: 'Edibles', 
+image: 'https://images.unsplash.com/photo-1568254183919-78a4f43a2877?auto=format&fit=crop&q=80&w=600', 
+price: '10,000 UGX',
+desc: 'Delectable, sweet, and chewy fruit-flavored gummies infused with laboratory-tested extracts. Offers consistent dosing and a vibrant sweet profile.' 
+},
+{ 
+id: 5, 
+name: 'Devil Intense Dark Chocolate', 
+category: 'Edibles', 
+image: 'https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&q=80&w=600', 
+price: '10,000 UGX',
+desc: 'Decadent Belgian dark chocolate bar layered with rich cocoa and pure botanical infusions. Delivers a robust cacao note combined with deeply relaxing properties.'
+},
+{ 
+id: 6, 
+name: 'Exotic Tasting Variety Bundle', 
+category: 'Bundles', 
+image: 'https://images.unsplash.com/photo-1512909006721-3d6018887383?auto=format&fit=crop&q=80&w=600', 
+price: '30,000 UGX',
+desc: 'Curated 4-Pack sampler combining our signature products. The ultimate choice for exploring top-shelf options in our line-up at a bundle-exclusive rate.'
+}
+];
+
+// Render items into the main catalog grid
+function renderServices(items) {
+const container = document.getElementById('service-feed');
+
+if (items.length === 0) {
+container.innerHTML = `<div class="col-span-full text-center py-10 text-emerald-700">No items matching your search.</div>`;
+return;
+}
+container.innerHTML = items.map(item => `
+<div onclick="openModal(${item.id})" class="glass-panel p-3 rounded-2xl flex items-center gap-4 hover:bg-[#061e18] transition group fade-in cursor-pointer hover:border-emerald-500/30">
+<div class="w-24 h-24 rounded-xl overflow-hidden shrink-0 border border-emerald-950">
+<img src="${item.image}" alt="${item.name}" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+</div>
+
+<div class="flex-1 min-w-0">
+<span class="text-[9px] font-bold text-emerald-400 tracking-wider uppercase mb-0.5 block">${item.category}</span>
+<h3 class="font-bold text-white text-sm md:text-base mb-1 truncate">${item.name}</h3>
+<p class="text-[10px] text-emerald-100/60 line-clamp-2 leading-tight mb-2">${item.desc}</p>
+<div class="flex justify-between items-center">
+<span class="text-xs font-black text-emerald-300 bg-[#030d0a] px-2 py-0.5 rounded border border-emerald-900/60">${item.price}</span>
+<div class="bg-emerald-600/20 text-emerald-400 p-1.5 rounded-lg group-hover:bg-emerald-600 group-hover:text-white transition duration-300">
+<i data-lucide="arrow-right" class="w-4 h-4"></i>
+</div>
+</div>
+</div>
+</div>
+`).join('');
+
+lucide.createIcons();
+}
+
+// Category filter logic
+function filterCategory(category) {
+const pills = document.querySelectorAll('.cat-pill');
+const navItems = document.querySelectorAll('.nav-item');
+
+pills.forEach(pill => {
+const isActive = pill.innerText.trim() === category || (category === 'all' && pill.innerText.trim() === 'All');
+pill.className = isActive
+? "cat-pill whitespace-nowrap px-4 py-2 rounded-full bg-emerald-600 text-white text-xs font-bold border border-emerald-500 shadow-lg shadow-emerald-950/40"
+: "cat-pill whitespace-nowrap px-4 py-2 rounded-full bg-[#0a2018] text-emerald-400 border border-emerald-900/60 text-xs font-semibold hover:bg-emerald-900 hover:text-white transition";
+});
+
+navItems.forEach(item => {
+const isMatch = item.getAttribute('onclick').includes(`'${category}'`);
+if (isMatch) {
+item.className = "nav-item w-full flex items-center gap-3 px-4 py-3 rounded-xl transition-all text-sm font-medium bg-emerald-600 text-white shadow-lg shadow-emerald-950/40";
+} else {
+item.className = "nav-item w-full flex items-center gap-3 px-4 py-3 rounded-xl transition-all text-sm font-medium text-emerald-400 hover:bg-emerald-900/50 hover:text-white";
+}
+});
+
+if (category === 'all') {
+renderServices(SERVICES);
+} else {
+const filtered = SERVICES.filter(item => item.category === category);
+renderServices(filtered);
+}
+}
+
+// Search filtering functionality
+document.getElementById('search-input').addEventListener('input', (e) => {
+const term = e.target.value.toLowerCase();
+const filtered = SERVICES.filter(item =>
+item.name.toLowerCase().includes(term) ||
+item.category.toLowerCase().includes(term) ||
+item.desc.toLowerCase().includes(term)
+);
+renderServices(filtered);
+});
+
+// Modal toggle and WhatsApp link rendering
+function openModal(id) {
+const item = SERVICES.find(i => i.id === id);
+const modal = document.getElementById('item-modal');
+const content = document.getElementById('modal-content');
+
+const whatsappLink = `https://wa.me/${WHATSAPP_NUM}?text=${encodeURIComponent(`Hello FourZ Kampala, I would like to order: ${item.name} (${item.price})`)}`;
+content.innerHTML = `
+<div class="h-56 w-full relative">
+<img src="${item.image}" alt="${item.name}" class="w-full h-full object-cover">
+<div class="absolute inset-0 bg-gradient-to-t from-[#061813] to-transparent"></div>
+<div class="absolute bottom-4 left-6 flex gap-2">
+<span class="px-2 py-1 bg-emerald-600 text-white text-[10px] font-bold rounded uppercase tracking-wider shadow-sm">${item.category}</span>
+<span class="px-2 py-1 bg-[#030d0a] text-emerald-300 text-[10px] font-black rounded uppercase tracking-wider border border-emerald-900/60 shadow-sm">${item.price}</span>
+</div>
+</div>
+<div class="p-6 text-center">
+<h2 class="text-2xl font-bold text-white mb-2">${item.name}</h2>
+<p class="text-emerald-100/70 text-sm mb-8 leading-relaxed">
+${item.desc}
+</p>
+
+<div class="flex gap-3">
+<button onclick="closeModal()" class="flex-1 py-3.5 rounded-xl border border-emerald-900 text-emerald-400 font-semibold hover:bg-emerald-950/40 transition">
+Close
+</button>
+<a href="${whatsappLink}" target="_blank" class="flex-[2] py-3.5 rounded-xl bg-emerald-600 text-white font-bold hover:bg-emerald-500 transition shadow-lg shadow-emerald-950/45 flex items-center justify-center gap-2">
+<i data-lucide="message-circle" class="w-5 h-5"></i> Order via WhatsApp
+</a>
+</div>
+<p class="text-[10px] text-emerald-600 mt-4">Fast-delivery operations active in the Kampala metropolitan area. Chat directly to coordinate drop-off points.</p>
+</div>
+`;
+
+lucide.createIcons();
+modal.classList.remove('hidden');
+}
+
+function closeModal() {
+document.getElementById('item-modal').classList.add('hidden');
+}
+
+// Initial Render
+renderServices(SERVICES);
+</script>
+</body>
+  </html>
